@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // Implementing variables to count the score
+    let humanScore = 0;
+    let computerScore = 0;
+
+    // Implementing the possible choices in an array
+    const choices = ['rock', 'paper', 'scissor'];
+    
+    // Function for the human turn, takes an imput from a prompt
+    function humanPlay() {
+        let humanPick = prompt('Now is your turn... you filthy bag of meat!', 'Rock, Paper or Scissor');
+        if ( (humanPick.toLowerCase() != 'rock') && (humanPick.toLowerCase() != 'paper') && (humanPick.toLowerCase() != 'scissor')) {
+            console.log('Your end draws near anyway!');
+            //keeps you in the game, waiting on a correct prompt
+            return humanPlay();
+        } else {
+            return humanPick;
+            
+        }
+        
+    }
+
+    // Function for the computer turn using a random number
+    function computerPlay() {
+        let randomChoice = Math.floor(Math.random()* choices.length);
+        return choices[randomChoice];
+    }
+
+    
+    
+    // Function that is going through the different possible plays
+    function playOneRound(computer, human) {
+        if ( computer === human ) {
+            console.log('It`s a tie! No one wins this round! Continue!');
+        }
+
+        else if ( computer === 'rock' ) {
+            if ( human === 'scissor' ) {
+                computerScore++;
+                console.log('Computer wins! Rock beats scissor!');
+            } else if ( human === 'paper' ) {
+                humanScore++;
+                console.log('Human wins! Paper beats rock!');
+            }
+        }
+
+        else if ( computer === 'paper' ) {
+            if ( human === 'rock' ) {
+                computerScore++;
+                console.log('Computer wins! Paper beats rock!')
+            } else if ( human === 'scissor' ){
+                humanScore++;
+                console.log('Human wins! Scissor beats paper!');
+            }
+        }
+
+        else if ( computer === 'scissor') {
+            if ( human === 'paper' ) {
+                computerScore++;
+                console.log('Computer wins! Scissor beats paper!')
+            } else if ( human === 'rock' ){
+                humanScore++;
+                console.log('Human wins! Rock beats scissor!')
+            }
+            }
+        }
+    
+    // Function that plays the game once
+    function game() {
+        let computer = computerPlay();
+        let human = humanPlay();
+        playOneRound(computer, human);
+    }
+
+    // A do...while loop, that helps us play the game as long as it takes to reach the desired score
+    do { 
+        game();
+        console.log(`Human: ${humanScore}, Computer: ${computerScore}`);
+        if (humanScore === 5)  {
+            console.log('Human won! Humanity is saved! All go back to your lifes!')
+        } else if (computerScore === 5) {
+            console.log('The robots won! Humanity is doomed! Run for your lifes!')
+        }}
+    while( humanScore != 5 && computerScore != 5 );
+    
+    //          (;..;)
+</script>
+</html>
