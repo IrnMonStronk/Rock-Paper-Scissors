@@ -98,12 +98,10 @@ buttons.forEach((button) => {
         } else if ( computerScore === 5 ) {
             // The final score will be shown and after 5 sec the user can chose to reload the game
             showCurrentRound.innerText = 'The robots won! Humanity is doomed! Run for your lives!';
-            showCurrentRound.style.color = 'red';
             setTimeout(reload, 5000);
         } else if ( humanScore === 5 ) {
             // The final score will be shown and after 5 sec the user can chose to reload the game
             showCurrentRound.innerText = 'Human won! Humanity is saved! All go back to your lives!';
-            showCurrentRound.style.color = 'blue';
             setTimeout(reload, 5000);
         }
     })
