@@ -1,0 +1,76 @@
+body {
+    background-color: blueviolet;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#playingField {
+    width: 550px;
+    height: 250px;
+    background-color: yellowgreen;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    border: 5px solid black;
+}
+#currentRound {
+    width: 550px;
+    height: 150px;
+    background-color: yellowgreen;
+    border: 5px solid black;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+#scoring {
+    width: 550px;
+    height: 150px;
+    background-color: yellowgreen;
+    border: 5px solid black;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+}
+
+#rock,
+#paper,
+#scissors {
+    font-size: 18px;
+    width: 150px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#humanHand,
+#computerHand {
+    width: 33%;
+    height: 75px;
+    border: 5px solid black;
+    display: flex;
+    justify-content:space-around;
+}
+
+#humanScore,
+#computerScore {
+    width: 25%;
+    height: 75px;
+    border: 5px solid black;
+    display: flex;
+    justify-content:space-around;
+}
+
+.button {
+    transition-duration: 0.5s;
+    border-radius: 12px;
+}
+
+.button:hover { 
+    background-color: red;
+    color: white;
+}
