@@ -1,39 +1,32 @@
 body {
-    background-color: blueviolet;
+    background-color: #36454f;
     display: flex;
     align-items: center;
-    justify-content: space-around;
     flex-direction: column;
     gap: 25px;
 }
 
 #playingField {
-    width: 550px;
+    width: 75%;
     height: 250px;
-    background-color: yellowgreen;
-    display: flex;
-    justify-content:space-around;
     align-items: center;
-    border: 5px solid black;
+    justify-content: center;
+    display: flex;
 }
 #currentRound {
-    width: 550px;
+    width: 75%;
     height: 150px;
-    background-color: yellowgreen;
-    border: 5px solid black;
-    display: flex;
-    justify-content:space-around;
-    align-items: center;
+    text-align: center;
+    color: #9C7A4B;
 }
 
 #scoring {
-    width: 550px;
+    width: 75%;
     height: 150px;
-    background-color: yellowgreen;
-    border: 5px solid black;
     display: flex;
     justify-content:space-around;
     align-items: center;
+    color: #9C7A4B;
 }
 
 #rock,
@@ -47,30 +40,13 @@ body {
     justify-content: center;
 }
 
-#humanHand,
-#computerHand {
-    width: 33%;
-    height: 75px;
-    border: 5px solid black;
-    display: flex;
-    justify-content:space-around;
-}
-
-#humanScore,
-#computerScore {
-    width: 25%;
-    height: 75px;
-    border: 5px solid black;
-    display: flex;
-    justify-content:space-around;
-}
-
 .button {
     transition-duration: 0.5s;
     border-radius: 12px;
+    background-color: #4F4536;
 }
 
 .button:hover { 
-    background-color: red;
+    background-color: #95BFDB;
     color: white;
 }
